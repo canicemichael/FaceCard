@@ -1,12 +1,12 @@
-import hero1 from "../../public/images/hero1.png";
-import hero2 from "../../public/images/hero2.png";
-import hero3 from "../../public/images/hero3.png";
-import hero4 from "../../public/images/hero4.png";
-import hero5 from "../../public/images/hero5.png";
-import hero6 from "../../public/images/hero6.png";
-import hero7 from "../../public/images/hero7.png";
-import hero8 from "../../public/images/hero8.png";
-import hero9 from "../../public/images/hero9.png";
+import hero1 from "../../src/images/hero1.png";
+import hero2 from "../../src/images/hero2.png";
+import hero3 from "../../src/images/hero3.png";
+import hero4 from "../../src/images/hero4.png";
+import hero5 from "../../src/images/hero5.png";
+import hero6 from "../../src/images/hero6.png";
+import hero7 from "../../src/images/hero7.png";
+import hero8 from "../../src/images/hero8.png";
+import hero9 from "../../src/images/hero9.png";
 
 export default function Header() {
   return (

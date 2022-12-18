@@ -1,65 +1,33 @@
-import card1 from "../../public/images/card1.png";
-import card2 from "../../public/images/card1.png";
-import card3 from "../../public/images/card1.png";
 // import StarIcon from "@mui/icons-material/Star";
 
-export default function Card({ rating, reviewCount, country, title, price }) {
+export default function Card({ props }) {
+  console.log(props);
+  let badgeText;
+  if (props.item.openSpots === 0) {
+    badgeText = "SOLDOUT";
+  } else if (props.item.location === "Online") {
+    badgeText = "ONLINE";
+  }
   return (
     <div className="card">
       <div>
         <div className="card1">
-          <p className="sold-out">SOLD OUT</p>
-          <img className="cardImg" src={card1} alt="" />
+          {badgeText && <p className="sold-out">{badgeText}</p>}
+          <img className="cardImg" src={props.item.coverImg} alt="" />
         </div>
         <div>
           <div>
-            <img src="" alt="" /> {rating} ({reviewCount}) {country}
+            <img src="" alt="" /> {props.item.stats.rating} (
+            {props.item.stats.reviewCount}) {props.item.location}
           </div>
           <div>
-            <p className="desc">{title}</p>
+            <p className="desc">{props.item.title}</p>
           </div>
           <div>
-            <p className="price">From ${price} / person</p>
+            <p className="price">From ${props.item.price} / person</p>
           </div>
         </div>
       </div>
     </div>
   );
-}
-
-{
-  /* <div>
-  <div className="card1">
-    <p className="sold-out">SOLD OUT</p>
-    <img className="cardImg" src={card2} alt="" />
-  </div>
-  <div>
-    <div>
-      <i></i> 5.0 (30) USA
-    </div>
-    <div>
-      <p className="desc">Learn wedding photography</p>
-    </div>
-    <div>
-      <p className="price">From $125 / person</p>
-    </div>
-  </div>
-</div>
-<div>
-  <div className="card1">
-    <p className="sold-out">ONLINE</p>
-    <img className="cardImg" src={card3} alt="" />
-  </div>
-  <div>
-    <div>
-      <i></i> 4.8 (2) USA
-    </div>
-    <div>
-      <p className="desc">Group Mountain Biking</p>
-    </div>
-    <div>
-      <p className="price">From $50 / person</p>
-    </div>
-  </div>
-</div> */
 }
