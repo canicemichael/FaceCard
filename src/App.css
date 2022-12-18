@@ -111,3 +111,6 @@ h2 {
 .price {
   font-size: 12px;
 }
+.cardsCont {
+  display: flex;
+}

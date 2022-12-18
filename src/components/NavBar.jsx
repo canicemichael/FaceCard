@@ -1,4 +1,4 @@
-import airbnbImg from "../assets/Vector.png";
+import airbnbImg from "../../public/images/Vector.png";
 
 export default function NavBar() {
   return (

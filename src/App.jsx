@@ -4,14 +4,16 @@ import NavBar from "./components/NavBar";
 import Header from "./components/Header";
 import Card from "./components/Card";
 import Joke from "./components/Joke";
+import Cards from "./components/Cards";
 
 function App() {
   return (
     <div className="App">
       <NavBar />
       <Header />
-      <Card />
+      <Cards />
     </div>
+
     //   <Joke
     //   setup="Why do bees stay in the hive in the winter?"
     //   punchline="Swarm"
