@@ -6,15 +6,15 @@ export default function Cards() {
   const cardELements = data.map((item) => {
     return (
       <Card
-        key={cards.id}
-        item={item}
-        // rating={cards.stats.rating}
-        // title={cards.title}
-        // reviewCount={cards.stats.reviewCount}
-        // location={cards.location}
-        // price={cards.price}
-        // coverImg={cards.coverImg}
-        // openSpots={cards.openSpots}
+        // item={item}
+        key={item.id}
+        coverImg={item.coverImg}
+        rating={item.stats.rating}
+        reviewCount={item.stats.reviewCount}
+        location={item.location}
+        title={item.title}
+        price={item.price}
+        openSpots={item.openSpots}
       />
     );
   });

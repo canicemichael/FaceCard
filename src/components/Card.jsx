@@ -1,11 +1,10 @@
 // import StarIcon from "@mui/icons-material/Star";
 
-export default function Card({ props }) {
-  console.log(props);
+export default function Card(props) {
   let badgeText;
-  if (props.item.openSpots === 0) {
+  if (props.openSpots === 0) {
     badgeText = "SOLDOUT";
-  } else if (props.item.location === "Online") {
+  } else if (props.location === "Online") {
     badgeText = "ONLINE";
   }
   return (
@@ -13,18 +12,18 @@ export default function Card({ props }) {
       <div>
         <div className="card1">
           {badgeText && <p className="sold-out">{badgeText}</p>}
-          <img className="cardImg" src={props.item.coverImg} alt="" />
+          <img className="cardImg" src={props.coverImg} alt="" />
         </div>
         <div>
           <div>
-            <img src="" alt="" /> {props.item.stats.rating} (
-            {props.item.stats.reviewCount}) {props.item.location}
+            <img src="" alt="" /> {props.rating} ({props.reviewCount}){" "}
+            {props.location}
           </div>
           <div>
-            <p className="desc">{props.item.title}</p>
+            <span className="desc">{props.title}</span>
           </div>
           <div>
-            <p className="price">From ${props.item.price} / person</p>
+            <p className="price">From ${props.price} / person</p>
           </div>
         </div>
       </div>

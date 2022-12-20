@@ -11,7 +11,9 @@ function App() {
     <div className="App">
       <NavBar />
       <Header />
-      <Cards />
+      <div className="cardContainer">
+        <Cards />
+      </div>
     </div>
   );
 }
