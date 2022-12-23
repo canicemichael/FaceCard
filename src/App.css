@@ -113,10 +113,13 @@ div.cardContainer {
   margin: 3px;
 }
 .desc {
-  font-size: 12px;
-  /* width: 8em; */
-  inline-size: 150px;
-  overflow-wrap: break-word;
+  width: 9.5em;
+  font-size: 14px;
+}
+p {
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre-wrap;
 }
 .price {
   font-size: 12px;
